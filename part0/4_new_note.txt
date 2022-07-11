@@ -1,7 +1,8 @@
 note over browser:
-enter note and push button "Save"
+enter new note and push button "Save"
 end note
 browser -> server: HTTP POST https:https://studies.cs.helsinki.fi/exampleapp/new_note
+server -> browser: Status code 302, redirection
 browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
 server-->browser: HTML-code
 browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
@@ -22,5 +23,3 @@ browser executes the event handler
 that renders notes to display
 end note
 
-
- 
